@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>iPhone Calculator</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <div class="phone">
-  <div class="display" id="display">0</div>
 
+  <!-- Status Bar -->
+  <div class="status-bar">
+    <span>9:41</span>
+    <span>📶 🔋</span>
+  </div>
+
+  <!-- Display -->
+  <div class="display-container">
+    <div class="display" id="display">0</div>
+  </div>
+
+  <!-- Buttons -->
   <div class="buttons">
+
     <button class="gray" onclick="clearDisplay()">AC</button>
     <button class="gray" onclick="toggleSign()">±</button>
     <button class="gray" onclick="append('%')">%</button>
@@ -34,15 +52,23 @@
 
     <button class="zero" onclick="append('0')">0</button>
     <button onclick="append('.')">.</button>
-    <button class="orange" onclick="calculate()">=</button>
+    <button class="orange equal" onclick="calculate()">=</button>
+
   </div>
 
+  <!-- History -->
   <div class="history">
-    <h4>History</h4>
+    <h4>📜 History</h4>
     <ul id="historyList"></ul>
   </div>
+
 </div>
 
+<!-- Sound -->
+<audio id="clickSound" src="https://www.soundjay.com/buttons/sounds/button-16.mp3"></audio>
+
+<!-- JS -->
 <script src="script.js"></script>
+
 </body>
 </html>
