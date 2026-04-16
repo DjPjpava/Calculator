@@ -1,10 +1,21 @@
 {
   "name": "iphone-calculator",
   "version": "1.0.0",
+  "description": "A modern iPhone-style calculator with animations, sound, and history",
+  "main": "script.js",
   "scripts": {
-    "start": "serve ."
+    "start": "live-server",
+    "build": "echo \"No build step required\""
   },
-  "dependencies": {
-    "serve": "^14.2.0"
+  "keywords": [
+    "calculator",
+    "iphone-ui",
+    "javascript",
+    "frontend"
+  ],
+  "author": "Pavan J",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
   }
 }
